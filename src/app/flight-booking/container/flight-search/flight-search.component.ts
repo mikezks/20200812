@@ -11,7 +11,10 @@ export class FlightSearchComponent implements OnInit {
   from = 'Hamburg';
   to = 'Graz';
   flights: Flight[];
-  selectedFlight: Flight;
+  basket: object = {
+    "3": true,
+    "5": true
+  };
 
   constructor(private flightService: FlightService) { }
 
@@ -27,9 +30,5 @@ export class FlightSearchComponent implements OnInit {
             },
             errResp => console.error('Error loading flights', errResp)
         );
-  }
-
-  select(flight: Flight): void {
-    this.selectedFlight = flight;
   }
 }

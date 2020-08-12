@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { FlightBookingRoutingModule } from './flight-booking-routing.module';
 import { FlightSearchComponent } from './container/flight-search/flight-search.component';
+import { FlightCardComponent } from './componets/flight-card/flight-card.component';
 
 @NgModule({
   declarations: [
-    FlightSearchComponent
+    FlightSearchComponent,
+    FlightCardComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,7 @@ import { FlightSearchComponent } from './container/flight-search/flight-search.c
     SharedModule
   ],
   exports: [
-    FlightSearchComponent
+    //FlightSearchComponent
   ]
 })
 export class FlightBookingModule { }

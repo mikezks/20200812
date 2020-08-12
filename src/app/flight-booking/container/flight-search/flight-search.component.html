@@ -6,10 +6,13 @@
 
   <div class="content">
 
-      <form>
+      <form #searchForm="ngForm">
           <div class="form-group">
               <label>From:</label>
-              <input name="from" class="form-control" [(ngModel)]="from">
+              <input name="from" class="form-control" [(ngModel)]="from" required>
+          </div>
+          <div *ngIf="searchForm?.controls['from']?.invalid">
+            This is a mandatory input.
           </div>
           <div class="form-group">
               <label>To:</label>

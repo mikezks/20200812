@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { FlightBookingRoutingModule } from './flight-booking-routing.module';
 import { FlightSearchComponent } from './container/flight-search/flight-search.component';
-import { FlightCardComponent } from './componets/flight-card/flight-card.component';
+import { FlightCardComponent } from './components/flight-card/flight-card.component';
+import { FlightEditComponent } from './container/flight-edit/flight-edit.component';
 
 @NgModule({
   declarations: [
     FlightSearchComponent,
+    FlightEditComponent,
     FlightCardComponent
   ],
   imports: [

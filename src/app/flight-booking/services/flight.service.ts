@@ -27,4 +27,17 @@ export class FlightService {
           //tap(() => console.log('Service used'))
         );
   }
+
+  findById(id: number): Observable<Flight> {
+    const url = 'http://www.angular.at/api/flight';
+
+    const headers = new HttpHeaders()
+                        .set('Accept', 'application/json');
+
+    const params = new HttpParams()
+                        .set('id', id.toString());
+
+    return this.http
+        .get<Flight>(url, {headers, params});
+  }
 }
